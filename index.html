@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lu ❤</title>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        font-family: "Nunito", sans-serif;
+    }
+    html {
+        height: 100vh;
+    }
+    body{
+        background: #fcfcfc;
+        background-image: url('https://static.vecteezy.com/system/resources/previews/002/073/899/large_2x/tropical-beach-with-light-blue-sky-background-free-photo.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    .contenedor_mobil {
+        display: none;
+    }
+    .contenedor_mobil {
+        margin-top: 100px;
+        text-align: center;
+        font-size: 80px;
+    }
+    .contenedor {
+        margin: auto;
+        width: 900px;
+        margin-top: 300px;
+        text-align: center;
+    }
+    .titulo{
+        margin-bottom: 20px;
+        color: #d0ffa7;
+    }
+    .opciones p {
+        background: #8BC34A;
+        display: initial;
+        padding: 12px;
+        color: #ffffff;
+        border-radius: 2px;
+        font-weight: bold;
+    }
+    p.p1 {
+        position: absolute;
+        top: 400px;
+        left: calc(50% - 80px);
+        transform: translateX(-50%);
+        width: 100px;
+    }
+    p.p2{
+        position: absolute;
+        top: 400px;
+        left: calc(50% + 80px);
+        transform: translateX(-50%);
+        width: 100px;
+    }
+    #si {
+        background: #143779;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        top: 122px;
+        width: 550px;
+        color: #ffffff;
+        padding: 50px;
+        display: none;
+    }
+    @media screen and (max-width: 900px) {
+        .contenedor_mobil {
+            display: block;
+        }
+        .contenedor {
+            display: none;
+        }
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".p1").hover(function(){
+      arriba =  Math.random() * (400 - 1) + 1;
+      abajo =  Math.random() * (609 - 1) + 1;
+    $(this).css("top", arriba);
+    $(this).css("left", abajo);
+    });
+});
+function dijoSi(){
+    document.getElementById("si").style.display = "block";
+    document.getElementById("titulo").style.display = "none";
+    document.getElementById("opciones").style.display = "none";
+
+}
+</script>
+<body>
+    <div class="contenedor_mobil">
+        <p>Tienes que verlo en una compu 🙄</p>
+    </div>
+    <div class="contenedor">
+        <div class="titulo" id="titulo">
+            <h1>¿Lu <span style="color: red;">❤</span> quieres ser mi novia?</h1>
+        </div>
+        <div class="opciones" id="opciones">
+            <p class="p1">NO</p>
+            <p onclick="dijoSi()" class="p2">SI</p>
+        </div>
+        <div id="si" class="si">
+            <img src="lu.jpg" width="70%">
+            <h2>Lo sabía peque 🤭</h2>
+        </div>
+    </div>
+</body>
+</html>
